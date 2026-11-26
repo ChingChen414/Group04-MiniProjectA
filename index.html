@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kipling Avenue and Dixon Road | SMRTTECH 4SC3</title>
+    <meta name="description" content="Group 4 compares human-driven traffic, autonomous vehicles and a revised signal at Kipling Avenue and Dixon Road in Toronto.">
+    <meta name="theme-color" content="#232A33">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5, bundled locally for offline viewing. -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.8.min.css">
+
+    <link rel="stylesheet" href="styles.css?v=final-showcase">
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable p-2" href="#film">Skip to study</a>
+    <nav class="showcase-nav" aria-label="Final showcase">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <a class="showcase-current" href="#top" aria-current="page">Project A · Toronto intersection</a>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#area">Study area</a>
+          <a href="#results">Results</a>
+          <a href="https://chingchen414.github.io/Group04-MiniProjectB/">Project B · Oshawa GO</a>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <header id="top" class="hero-banner text-center py-5">
+      <div class="container">
+
+        <!-- SMRTTECH 4SC3 tag -->
+        <div class="mb-1">
+          <span
+            class="hero-course-tag"
+            id="courseTag">
+            SMRTTECH 4SC3
+          </span>
+        </div>
+
+        <!-- Course Project pill -->
+        <div class="hero-tagline" id="studioTagline">
+          Mini Project A · Roadway simulation
+        </div>
+
+        <img
+          src="assets/img/image1.jpg"
+          alt="Group 4’s NETEDIT aerial view of the signalized junction at Kipling Avenue and Dixon Road, Toronto"
+          class="hero-photo"
+          id="profileImg">
+
+        <p class="mb-1 fw-semibold" id="studentNameLine">
+          Group 4 · Fall 2026
+        </p>
+
+        <p class="mb-2 small text-uppercase text-white" id="studentAffilLine">
+          Automation Systems Engineering Technology, McMaster University
+        </p>
+
+        <p class="mb-0 small">
+          <a
+            class="text-white text-decoration-underline"
+            id="emailLink"
+            href="mailto:chenc232@mcmaster.ca">
+            chenc232@mcmaster.ca
+          </a>
+        </p>
+
+        <div class="notice">
+          <div class="notice-title" id="noticeTitle">
+            Academic Disclaimer
+          </div>
+
+          <p class="notice-text" id="noticeText">
+            This McMaster University course project uses simulated traffic. The findings are for educational use and do not represent the City of Toronto.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <!-- PROJECT TITLE + AUTOPLAY VIDEO -->
+      <section id="film" class="py-3 text-center bg-white">
+        <div class="container">
+          <div
+            class="text-muted small text-uppercase mb-4"
+            id="projectTitleLabel">
+            Kipling Avenue and Dixon Road · Toronto
+          </div>
+
+          <h1 class="section-title h2 mb-3" id="projectTitleText">
+            SUMO-Based Roadway Modelling and Speed–Density Assessment at Kipling Avenue and Dixon Road, Toronto
+          </h1>
+          <p class="project-lede mx-auto mb-4">On the four-lane approach to the signal, nine more seconds of green raised mean interval speed by 40%. Changing the entire fleet to connected and autonomous vehicles changed that mean by 0.014 m/s.</p>
+
+          <div class="intro-video-wrap">
+            <video
+              id="introHeroVideo"
+              class="intro-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              poster="assets/img/image3.jpg"
+              preload="metadata"
+              aria-label="Traffic moving through junction J1. Yellow human-driven vehicles are followed by grey connected and autonomous vehicles.">
+
+              <source
+                id="introHeroSource"
+                src="assets/video/video.mp4"
+                type="video/mp4">
+
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="intro-badge">
+              Academic Demo
+            </div>
+          </div>
+
+          <p class="mt-3 mb-0 text-muted small" id="introCaption">
+            The same ten seconds at junction J1 play twice, first with yellow human-driven vehicles (HDVs), then with grey connected and autonomous vehicles (CAVs). Vehicle positions come from the two submitted SUMO models at simulation seconds 320–330.
+          </p>
+          <p class="mt-1 mb-0 small"><a id="videoDownload" href="assets/video/video.mp4" download>Download the video</a></p>
+        </div>
+      </section>
+
+      <!-- INTRODUCTION (3 CARDS) -->
+      <div class="star-divider" aria-hidden="true">*</div>
+
+      <section id="study" class="py-5 bg-white">
+        <div class="container">
+          <h2 class="section-title h3 text-center mb-4" id="caseTitle">
+            Introduction
+          </h2>
+
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-2" id="backgroundTitle">
+                    Background
+                  </h3>
+
+                  <ul class="mb-0" id="backgroundList"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-2" id="problemTitle">
+                    Problem Statement
+                  </h3>
+
+                  <ul class="mb-0" id="problemList"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h5 mb-2" id="objectivesTitle">
+                    Project Objectives
+                  </h3>
+
+                  <ul class="mb-0" id="objectivesList"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="area" class="py-5 bg-light">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-4">
+              <h2 class="section-title h3 mb-3">Study area</h2>
+              <p>Kipling Avenue crosses Dixon Road at junction J1 in Toronto. We traced the surrounding streets from the assigned GIS background, then selected the four-lane approach immediately east of the signal.</p>
+              <p class="mb-0">Each lane on E61 is 43.42 m long and has a modelled limit of 13.89 m/s (50 km/h). All three scenarios sample this same approach.</p>
+            </div>
+            <figure class="col-lg-8 mb-0">
+              <a class="figure-link" href="assets/img/image2.jpg" target="_blank" rel="noopener">
+                <img class="img-fluid rounded" src="assets/img/image2.jpg" width="1300" height="800" alt="Aerial map marks the junction. A network inset outlines the full model extent and marks J1 inside its western side.">
+              </a>
+              <figcaption class="small mt-2 text-muted">The ring marks J1. The inset shows the bounds of Group 4’s model and the location of E61. Source: Report A GIS figure and the submitted SUMO network.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIPELINE OVERVIEW -->
+      <div class="star-divider" aria-hidden="true">*</div>
+
+      <section id="methods" class="py-5 bg-white">
+        <div class="container">
+          <h2 class="section-title h3 text-center mb-2" id="overviewTitle">
+            Methodology
+          </h2>
+
+          <p
+            class="text-center text-muted mb-5 section-subtitle"
+            id="overviewSubtitle"
+            style="display:none;">
+          </p>
+
+          <div
+            id="stepsRow"
+            class="row row-cols-1 row-cols-md-3 gx-4 gx-xl-5 gy-5 justify-content-center">
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPLEMENTATION MODULES -->
+      <div class="star-divider" aria-hidden="true">*</div>
+
+      <section id="details" class="py-5 bg-white">
+        <div class="container">
+          <h2 class="section-title h3 text-center mb-2" id="implTitle">
+            Inside the three SUMO scenarios
+          </h2>
+
+          <p
+            class="text-center text-muted mb-5 section-subtitle"
+            id="implSubtitle"
+            style="display:none;">
+          </p>
+
+          <div id="modulesContainer"></div>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <div class="star-divider" aria-hidden="true">*</div>
+
+      <section id="results" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title h3 text-center mb-2" id="resultsTitle">
+            Results &amp; Potential Improvements
+          </h2>
+
+          <p
+            class="text-center text-muted mb-4 section-subtitle"
+            id="resultsSubtitle">
+          </p>
+
+          <!-- CHARTS -->
+          <div class="row g-4 mt-4">
+            <div class="col-lg-6">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold mb-3" id="chartLeftTitle">
+                    Base scenario · Human-driven
+                  </h3>
+
+                  <a class="figure-link" href="assets/img/image6.jpg" target="_blank" rel="noopener">
+                    <img id="chartLeftImg" class="img-fluid rounded"
+                      src="assets/img/image6.jpg" width="1300" height="800"
+                      alt="Base scenario · Human-driven speed–density plot for E61">
+                  </a>
+                  <p class="small text-muted mt-2 mb-0">Human-driven fleet, original signal. The mean of the 36 interval speeds is 3.562 m/s. Source: Group 4 E61 edge output.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold mb-3" id="chartRightTitle">
+                    Scenario 1 · Autonomous
+                  </h3>
+
+                  <a class="figure-link" href="assets/img/image7.jpg" target="_blank" rel="noopener">
+                    <img id="chartRightImg" class="img-fluid rounded"
+                      src="assets/img/image7.jpg" width="1300" height="800"
+                      alt="Scenario 1 · Autonomous speed–density plot for E61">
+                  </a>
+                  <p class="small text-muted mt-2 mb-0">CAV fleet, original signal. The mean of the 36 interval speeds is 3.576 m/s. Source: Group 4 E61 edge output.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <figure class="card card-soft mt-4">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3">Scenario 2 · Nine more seconds of green</h3>
+              <a class="figure-link" href="assets/img/E61-signal-comparison.png" target="_blank" rel="noopener">
+                <img class="img-fluid rounded" loading="lazy" width="2520" height="1029"
+                  src="assets/img/E61-signal-comparison.png"
+                  alt="The 36 baseline observations cluster near 60 to 80 vehicles per kilometre. With the longer green, most observations shift toward 35 to 60 vehicles per kilometre at higher speeds.">
+              </a>
+              <figcaption class="mt-2 text-muted">The two panels use the same scales. With human drivers in both runs, mean edge density fell from 63.077 to 44.455 veh/km. Source: Group 4, Report A, figure 6.</figcaption>
+            </div>
+          </figure>
+
+          <!-- DISCUSSION -->
+          <div class="row g-4 mt-3">
+            <div class="col-lg-12">
+              <div class="card card-soft">
+                <div class="card-body">
+                  <h3 class="h5 mb-2" id="discussionTitle">
+                    Discussion
+                  </h3>
+
+                  <ul class="mb-0" id="discussionList"></ul>
+
+                  <p
+                    class="kpi-note mt-3 mb-0"
+                    id="disclaimerLong">
+                  </p>
+                  <p><strong>Next test.</strong> Collect turning counts to calibrate demand, then compare delay on all four approaches over several random seeds. This would show who gains and who waits longer under the revised split.</p>
+
+                  <div class="table-responsive mt-3" role="region" aria-label="Scenario measurements for E61" tabindex="0">
+                    <table class="table table-sm kpi-table caption-top align-middle">
+                      <caption>Common one-hour window on edge E61</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Scenario</th>
+                          <th scope="col">Mean interval speed (m/s)</th>
+                          <th scope="col">Mean edge density (veh/km)</th>
+                          <th scope="col">Vehicle-time-weighted speed (m/s)</th>
+                        </tr>
+                      </thead>
+                      <tbody id="summaryRows"></tbody>
+                    </table>
+                  </div>
+                  <a class="small" href="assets/data/E61_speed_density.csv" download>Download the 108 interval measurements (CSV)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <div class="star-divider" aria-hidden="true">*</div>
+
+      <section id="credits" class="py-5 bg-white">
+        <div class="container">
+          <h2 class="section-title h3 text-center mb-2" id="teamTitle">
+            Team & Acknowledgments
+          </h2>
+
+          <p
+            class="text-center text-muted mb-4 section-subtitle"
+            id="teamSubtitle">
+          </p>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold mb-2">
+                    Report A authors
+                  </h3>
+
+                  <ul class="mb-0" id="teamList">
+                    <li>Ricardo Solis</li><li>Aris D’Silva</li><li>Ching Chen</li><li>Shengyao Xu</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card card-soft h-100">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold mb-2">
+                    Acknowledgments
+                  </h3>
+
+                  <ul class="mb-3" id="ackList"></ul>
+
+                  <div class="d-flex flex-column flex-md-row gap-2 align-items-md-center justify-content-between">
+                    <div class="text-muted small" id="repoLabel">
+                      Project Repository
+                    </div>
+
+                    <a
+                      class="btn btn-sm btn-outline-primary"
+                      id="repoLink"
+                      href="https://github.com/ChingChen414/Group04-MiniProjectA"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Open Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-5">
+      <div class="container small">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="footer-title">
+              Academic Disclaimer
+            </div>
+
+            <div
+              class="footer-disclaimer"
+              id="footerDisclaimer">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-title">
+              Links
+            </div>
+
+            <a
+              href="https://roadwayvr.com"
+              id="footerHome"
+              class="footer-link"
+              target="_blank"
+              rel="noopener noreferrer">
+              RoadwayVR
+            </a>
+
+            <a
+              id="footerRepo"
+              href="https://github.com/ChingChen414/Group04-MiniProjectA"
+              class="footer-link"
+              target="_blank"
+              rel="noopener noreferrer">
+              GitHub repository
+            </a>
+            <nav class="d-flex gap-3 mt-2" aria-label="Sections">
+              <a class="footer-link" href="#film">Video</a>
+              <a class="footer-link" href="#methods">Methods</a>
+              <a class="footer-link" href="#results">Results</a>
+            </nav>
+            <a class="footer-link mt-2" href="https://chingchen414.github.io/Group04-MiniProjectB/">Project B · Oshawa GO station</a>
+          </div>
+
+          <div class="col-md-4">
+            <div class="footer-title">
+              Project contact · Ching Chen
+            </div>
+
+            <a
+              href="mailto:chenc232@mcmaster.ca"
+              id="footerEmail"
+              class="footer-link">
+              chenc232@mcmaster.ca
+            </a>
+          </div>
+        </div>
+
+        <!-- RoadwayVR template attribution -->
+        <div class="template-credit">
+          <span id="templateCredit">
+            This academic showcase template was developed by RoadwayVR.
+          </span>
+
+          <a
+            id="templateCreditLink"
+            href="https://roadwayvr.com"
+            target="_blank"
+            rel="noopener noreferrer">
+            Learn more at RoadwayVR.com
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Config -->
+    <script src="config.js?v=final-showcase"></script>
+
+    <!-- Apply config -->
+    <script>
+      const C = window.SITE_CONFIG || {};
+
+      // Theme vars
+      if (C.theme) {
+        document.documentElement.style.setProperty(
+          "--hero-bg",
+          C.theme.heroBg || "#111"
+        );
+
+        document.documentElement.style.setProperty(
+          "--hero-fg",
+          C.theme.heroText || "#fff"
+        );
+
+        document.documentElement.style.setProperty(
+          "--page-bg",
+          C.theme.pageBg || "#f8fafc"
+        );
+
+        document.documentElement.style.setProperty(
+          "--accent",
+          C.theme.accent || "#7c3aed"
+        );
+      }
+
+      if (C.dividers) {
+        document.documentElement.style.setProperty(
+          "--divider-bg",
+          C.dividers.dividerBg || "#f9f9f9"
+        );
+
+        document.documentElement.style.setProperty(
+          "--divider-text",
+          C.dividers.dividerText || "#ffffff"
+        );
+      }
+
+      if (C.footer) {
+        document.documentElement.style.setProperty(
+          "--footer-bg",
+          C.footer.footerBg || "#111"
+        );
+
+        document.documentElement.style.setProperty(
+          "--footer-text",
+          C.footer.footerText || "#fff"
+        );
+
+        document.documentElement.style.setProperty(
+          "--footer-border",
+          C.footer.footerBorder || "#222"
+        );
+      }
+
+      // Title
+      if (C.pageTitle) {
+        document.title = C.pageTitle;
+      }
+
+      const el = (id) => document.getElementById(id);
+
+      const setText = (id, val) => {
+        const x = el(id);
+
+        if (x && val != null) {
+          x.textContent = val;
+        }
+      };
+
+      const setTextOrHide = (id, val) => {
+        const x = el(id);
+
+        if (!x) {
+          return;
+        }
+
+        const v = (val ?? "").toString().trim();
+
+        if (!v) {
+          x.style.display = "none";
+          return;
+        }
+
+        x.style.display = "";
+        x.textContent = v;
+      };
+
+      const fillList = (ulId, items) => {
+        const ul = el(ulId);
+
+        if (!ul) {
+          return;
+        }
+
+        ul.innerHTML = (items || [])
+          .map((t) => `<li>${t}</li>`)
+          .join("");
+      };
+
+      // Footer links and RoadwayVR template attribution
+      const footerHome = el("footerHome");
+
+      if (footerHome) {
+        footerHome.href =
+          C.homeUrl || "https://roadwayvr.com";
+
+        footerHome.textContent =
+          C.footer?.homeLinkText || "RoadwayVR";
+      }
+
+      const templateCredit = el("templateCredit");
+      const templateCreditLink = el("templateCreditLink");
+
+      if (templateCredit) {
+        templateCredit.textContent =
+          C.footer?.templateCredit ||
+          "This academic showcase template was developed by RoadwayVR.";
+      }
+
+      if (templateCreditLink) {
+        templateCreditLink.textContent =
+          C.footer?.templateCreditLinkText ||
+          "Learn more at RoadwayVR.com";
+
+        templateCreditLink.href =
+          C.footer?.templateCreditUrl ||
+          "https://roadwayvr.com";
+      }
+
+      // Hero
+      if (C.hero) {
+        // course tag (SMRTTECH 4SC3)
+        const ct = el("courseTag");
+        const tagText = (C.hero.courseTag || "").trim();
+
+        if (ct) {
+          if (tagText) {
+            ct.textContent = tagText;
+            ct.style.display = "inline-block";
+          } else {
+            ct.style.display = "none";
+          }
+        }
+
+        setText(
+          "studioTagline",
+          C.hero.tagline ||
+          "Course Project: Smart Cities and Communities"
+        );
+
+        setText(
+          "studentNameLine",
+          C.hero.studentName || ""
+        );
+
+        setText(
+          "studentAffilLine",
+          [C.hero.program, C.hero.university]
+            .filter(Boolean)
+            .join(", ")
+        );
+
+        const img = el("profileImg");
+
+        if (img && C.hero.profileImage) {
+          img.src = C.hero.profileImage;
+        }
+
+        const emailLink = el("emailLink");
+
+        if (emailLink && C.hero.email) {
+          emailLink.textContent = C.hero.email;
+          emailLink.href = "mailto:" + C.hero.email;
+        }
+
+        const footerEmail = el("footerEmail");
+
+        if (footerEmail && C.hero.email) {
+          footerEmail.textContent = C.hero.email;
+          footerEmail.href = "mailto:" + C.hero.email;
+        }
+      }
+
+      // Disclaimer
+      if (C.disclaimer) {
+        setText(
+          "noticeTitle",
+          "Academic Disclaimer"
+        );
+
+        setText(
+          "noticeText",
+          C.disclaimer.short || ""
+        );
+
+        setText(
+          "footerDisclaimer",
+          C.disclaimer.short || ""
+        );
+
+        setText(
+          "disclaimerLong",
+          C.disclaimer.long || ""
+        );
+      }
+
+      // Intro (Project title + video)
+      if (C.intro) {
+        setTextOrHide(
+          "projectTitleLabel",
+          C.intro.projectTitleLabel || "Project Title"
+        );
+
+        setTextOrHide(
+          "projectTitleText",
+          C.intro.projectTitle || ""
+        );
+
+        setTextOrHide(
+          "introCaption",
+          C.intro.videoCaption || ""
+        );
+
+        const v = el("introHeroVideo");
+        const s = el("introHeroSource");
+
+        if (v && s) {
+          if (C.intro.heroVideo) {
+            s.src = C.intro.heroVideo;
+          }
+
+          if (C.intro.heroVideoPoster) {
+            v.poster = C.intro.heroVideoPoster;
+          }
+
+          if (C.intro.heroVideoAlt) {
+            v.setAttribute(
+              "aria-label",
+              C.intro.heroVideoAlt
+            );
+          }
+
+          el("videoDownload").href = s.getAttribute("src");
+          v.autoplay = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          v.load();
+        }
+      }
+
+      // Introduction cards
+      if (C.caseStudy) {
+        setText(
+          "caseTitle",
+          C.caseStudy.title || "Introduction"
+        );
+
+        setText(
+          "backgroundTitle",
+          C.caseStudy.backgroundTitle || "Background"
+        );
+
+        fillList(
+          "backgroundList",
+          C.caseStudy.backgroundBullets || []
+        );
+
+        setText(
+          "problemTitle",
+          C.caseStudy.problemTitle || "Problem Statement"
+        );
+
+        fillList(
+          "problemList",
+          C.caseStudy.problemBullets || []
+        );
+
+        setText(
+          "objectivesTitle",
+          C.caseStudy.objectivesTitle || "Project Objectives"
+        );
+
+        fillList(
+          "objectivesList",
+          C.caseStudy.objectivesBullets || []
+        );
+      }
+
+      // Overview steps
+      if (C.overview) {
+        setText(
+          "overviewTitle",
+          C.overview.title || "Methodology"
+        );
+
+        setTextOrHide(
+          "overviewSubtitle",
+          C.overview.subtitle || ""
+        );
+
+        const stepsRow = el("stepsRow");
+
+        if (
+          stepsRow &&
+          Array.isArray(C.overview.steps)
+        ) {
+          stepsRow.innerHTML = C.overview.steps
+            .map((step, i) => `
+              <div class="col">
+                <div class="text-center h-100 px-2">
+                  <a class="step-link" href="#module-${i + 1}">
+                    <img src="${step.image || ""}" alt="" class="circle-img">
+                    <h3 class="tutorial-title mt-2 mb-1">Step ${i + 1}. ${step.title || ""}</h3>
+                  </a>
+
+                  <p class="tutorial-text text-muted mb-0">
+                    ${step.text || ""}
+                  </p>
+                </div>
+              </div>
+            `)
+            .join("");
+        }
+      }
+
+      // Implementation modules
+      if (C.implementation) {
+        setText(
+          "implTitle",
+          C.implementation.title ||
+          "Methodology Steps (Demo Modules)"
+        );
+
+        setTextOrHide(
+          "implSubtitle",
+          C.implementation.subtitle || ""
+        );
+
+        const wrap = el("modulesContainer");
+
+        const modules = Array.isArray(
+          C.implementation.modules
+        )
+          ? C.implementation.modules
+          : [];
+
+        if (wrap) {
+          wrap.innerHTML = modules
+            .map((m, i) => {
+              const bullets = Array.isArray(m.bullets)
+                ? m.bullets
+                : [];
+
+              const bulletHtml = bullets
+                .map((b) => `<li>${b.text || ""}</li>`)
+                .join("");
+
+              const textColOrder =
+                i % 2 === 1 ? "order-lg-2" : "";
+
+              const imgColOrder =
+                i % 2 === 1 ? "order-lg-1" : "";
+
+              return `
+                <div id="module-${i + 1}" class="row gy-4 mb-5">
+                  <div class="col-lg-6 ${textColOrder} tutorial-text-col">
+                    <div>
+                      <h3 class="h4 mb-2">
+                        Module ${i + 1}. ${m.title || ""}
+                      </h3>
+
+                      <ul class="check-list">
+                        ${bulletHtml}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <figure class="col-lg-6 mb-0 ${imgColOrder}">
+                    <a class="figure-link" href="${m.image}" target="_blank" rel="noopener">
+                      <img src="${m.image}" alt="${m.alt || m.title || ""}"
+                        class="img-fluid tutorial-large-img" width="1300" height="800">
+                    </a>
+                    <figcaption class="small mt-2 text-muted">${m.caption || ""}</figcaption>
+                  </figure>
+                </div>
+              `;
+            })
+            .join("");
+        }
+      }
+
+      // Results
+      if (C.results) {
+        setText(
+          "resultsTitle",
+          C.results.title || "Results"
+        );
+
+        setText(
+          "resultsSubtitle",
+          C.results.subtitle || ""
+        );
+
+        setText(
+          "discussionTitle",
+          C.results.discussionTitle || "Discussion"
+        );
+
+        const tbody = el("summaryRows");
+        for (const values of C.results.summary || []) {
+          const row = tbody.insertRow();
+          const scenario = document.createElement("th");
+          scenario.scope = "row";
+          scenario.textContent = values[0];
+          row.append(scenario);
+          for (const value of values.slice(1)) {
+            row.insertCell().textContent = value;
+          }
+        }
+
+        if (C.results.charts) {
+          const L = C.results.charts.left || {};
+          const R = C.results.charts.right || {};
+
+          setText(
+            "chartLeftTitle",
+            L.title || "Base scenario · Human-driven"
+          );
+
+          setText(
+            "chartRightTitle",
+            R.title || "Scenario 1 · Autonomous"
+          );
+
+          const li = el("chartLeftImg");
+
+          if (li && L.src) {
+            li.src = L.src;
+            li.alt = L.alt || "";
+            li.parentElement.href = L.src;
+          }
+
+          const ri = el("chartRightImg");
+
+          if (ri && R.src) {
+            ri.src = R.src;
+            ri.alt = R.alt || "";
+            ri.parentElement.href = R.src;
+          }
+        }
+
+        fillList(
+          "discussionList",
+          C.results.discussionBullets || []
+        );
+      }
+
+      // Team
+      if (C.team) {
+        setText(
+          "teamTitle",
+          C.team.title || "Team & Acknowledgments"
+        );
+
+        setText(
+          "teamSubtitle",
+          C.team.subtitle || ""
+        );
+
+        fillList("teamList", C.team.members || []);
+
+        fillList(
+          "ackList",
+          C.team.acknowledgments || []
+        );
+
+        setText(
+          "repoLabel",
+          C.team.repoLabel || "Project Repository"
+        );
+
+        const repoLink = el("repoLink");
+
+        if (repoLink) {
+          repoLink.href = C.team.repoUrl || "#";
+          el("footerRepo").href = repoLink.href;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+:root{
+  --hero-bg: #232A33;
+  --hero-fg: #fff;
+  --page-bg: #f8fafc;
+  --accent: #7c3aed;
+
+  --divider-bg: #f9f9f9;
+  --divider-text: #ffffff;
+
+  --footer-bg: #111;
+  --footer-text: #fff;
+  --footer-border: #222;
+}
+
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--page-bg);
+}
+
+a{ color: var(--accent); }
+a:hover{ opacity: 0.85; }
+
+.showcase-nav {
+  background: #16212c;
+  color: white;
+  padding-block: .8rem;
+  font-size: .95rem;
+}
+.showcase-nav a {
+  color: #fff;
+  text-underline-offset: .2em;
+}
+.showcase-current {
+  font-weight: 700;
+}
+.showcase-nav a:focus-visible, .hero-banner a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+.project-lede {
+  max-width: 46rem;
+  color: #374554;
+  font-size: 1.06rem;
+}
+
+/* HERO */
+.hero-banner{
+  background-color: var(--hero-bg);
+  color: var(--hero-fg);
+}
+
+/* RWR 4013 tag */
+.hero-course-tag{
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.45rem;
+}
+
+/* Course Project pill (big) */
+.hero-tagline{
+  opacity: 1;
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin: 0 auto 0.9rem;
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.section-title{
+  font-family: "Georgia","Times New Roman",serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.section-subtitle{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Portrait */
+.hero-photo{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.75);
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto 1rem;
+}
+
+/* Notice / disclaimer bar */
+.notice{
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  padding: 12px 14px;
+  max-width: 980px;
+  margin: 14px auto 0;
+  text-align: left;
+}
+
+.notice-title{
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.notice-text{
+  font-size: 0.92rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Divider */
+.star-divider{
+  font-size: 0.5rem;
+  color: var(--divider-text);
+  background: var(--divider-bg);
+  text-align: center;
+  padding: 1.1rem 0;
+  margin: 0;
+}
+
+/* Intro video */
+.intro-video-wrap{
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
+  margin: 0 auto;
+}
+
+.intro-video{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #000;
+}
+
+.intro-badge{
+  position: absolute;
+  top: calc(10.6% + 6px);
+  left: 10px;
+  pointer-events: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 992px){
+  .intro-video-wrap{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px){
+  .intro-video-wrap{
+    max-width: 672px;
+  }
+}
+
+/* Circle images */
+.circle-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.tutorial-title{
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.tutorial-text{
+  font-size: 0.88rem;
+}
+
+/* Cards */
+.card-soft{
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* Check list */
+.check-list{
+  list-style: none;
+  padding-left: 0;
+}
+
+.check-list li{
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.98rem;
+}
+
+.check-list li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #198754;
+  font-weight: 800;
+}
+
+/* Module layout */
+.tutorial-text-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tutorial-large-img{
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.16);
+  display: block;
+}
+
+@media (min-width: 992px){
+  .tutorial-large-img{
+    max-width: 640px;
+  }
+}
+
+/* KPI table */
+.kpi-table th{
+  font-weight: 800;
+}
+
+.kpi-note{
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--footer-border);
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.footer-title{
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link{
+  display: block;
+  text-decoration: none;
+  color: var(--footer-text);
+  margin-bottom: 0.25rem;
+}
+
+.footer-link:hover{
+  color: var(--accent);
+}
+
+.footer-disclaimer{
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* RoadwayVR template attribution */
+.template-credit{
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.template-credit a{
+  color: var(--footer-text);
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: 0.25rem;
+}
+
+.template-credit a:hover{
+  color: var(--accent);
+}
+
+/* Project title label + title sizing */
+#projectTitleLabel{
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+#projectTitleText{
+  font-size: clamp(1.55rem, 3vw, 2.55rem);
+  max-width: 54rem;
+  margin-inline: auto;
+  text-wrap: balance;
+  line-height: 1.2;
+}
+
+/* Frame the intersection at the center of the template’s circular portrait. */
+.hero-photo {
+  object-position: center;
+}
+
+/* Keep linked thumbnails and full-size figures in the course template layout. */
+.step-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.step-link:hover .tutorial-title, .step-link:focus-visible .tutorial-title {
+  text-decoration: underline;
+}
+.figure-link {
+  display: block;
+}
+.figure-link:hover {
+  opacity: 1;
+}
+.hero-tagline {
+  text-wrap: balance;
+}
+#introCaption {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.kpi-table td {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.kpi-table th:not(:first-child), .kpi-table td {
+  text-align: right;
+}
+@media (max-width: 575.98px) {
+  .kpi-table {
+    min-width: 34rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body {
+    scroll-behavior: auto;
+  }
+}
